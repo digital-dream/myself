@@ -12,7 +12,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-hover.css" />
@@ -21,7 +20,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/style.css">
     <!-- endbuild -->
 
     <link rel="apple-touch-icon" sizes="57x57" href="res/icon/ios/icon-57.png">
@@ -47,12 +46,10 @@
     <!-- Sidebars -->
     <div class="sidebar sidebar-left">
         <div class="scrollable">
-            <h1 class="scrollable-header app-name">Fate</h1>
+            <h1 class="scrollable-header app-name">Menu</h1>
             <div class="scrollable-content">
                 <div class="list-group" ui-turn-off='uiSidebarLeft'>
-                    <a class="list-group-item" href="#overview">Perfil completo <i class="fa fa-chevron-right pull-right"></i></a>
-                    <a class="list-group-item" href="#main">Signo do zodíaco <i class="fa fa-chevron-right pull-right"></i></a>
-                    <a class="list-group-item" href="#/setReset" data-ng-click="setReset(true)">Novo cadastro<i class="fa fa-chevron-right pull-right"></i></a>
+                    <a class="list-group-item" href="#">________ <i class="fa fa-chevron-right pull-right"></i></a>
                 </div>
             </div>
         </div>
@@ -60,16 +57,9 @@
 
     <!--
         <div class="sidebar sidebar-right">...</div>
-      -->
+    -->
 
     <div class="app">
-        <!--
-        <div class="navbar navbar-app navbar-absolute-top"></div>
-        <div class="navbar navbar-app navbar-absolute-bottom"></div>
-        -->
-
-        <!-- App body -->
-
         <div class='app-body'>
             <div class='app-content'>
                 <ng-view></ng-view>
@@ -89,7 +79,7 @@
     <![endif]-->
     <!-- endbuild -->
 
-    <!-- build:js(.) scripts/vendor.js -->
+    <!-- build:js(.) scripts/components.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -108,32 +98,15 @@
     <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
     <script src="bower_components/angular-swipe/dist/angular-swipe.js"></script>
     <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-cordova/src/angular-cordova.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/prototype.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/models/DictionaryBean.js"></script>
-    <script src="scripts/models/CurrentDateBean.js"></script>
-    <script src="scripts/models/BirthdayBean.js"></script>
-    <script src="scripts/models/MessageBean.js"></script>
-    <script src="scripts/models/MessageAgeBean.js"></script>
-    <script src="scripts/models/NumerologyBean.js"></script>
-    <script src="scripts/models/TableAlphabeticalBean.js"></script>
-
-    <script src="scripts/models/WheelSamsaraBean.js"></script>
-    <script src="scripts/models/MagicAndMeaningOfNumbersBean.js"></script>
-    <script src="scripts/models/KabbalahBean.js"></script>
-
-    <script src="scripts/business/LimitBO.js"></script>
-    <script src="scripts/business/KabalaBO.js"></script>
-    <script src="scripts/business/TreeOfLifeBO.js"></script>
-    <script src="scripts/business/SignsBO.js"></script>
-
-    <script src="scripts/controllers/ads.js"></script>
-    <script src="scripts/controllers/login.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/overview.js"></script>
+    <script src="scripts/controllers/LoginCtrl.js"></script>
+    <script src="scripts/controllers/MainCtrl.js"></script>
     <!-- endbuild -->
 
 </body>
